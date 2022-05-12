@@ -1,59 +1,32 @@
-#ingredient-info {
+body{
+    background-color: grey;
+}
+
+#recipes {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1vmax;
 }
 
-.image {
-    width: 200px;
-    height: 200px;
-    display: block;
-    position: relative;
-    margin-left: 25%;
-
-}
-
-.recipe {
-    height: 100%;
-    width: 100%;
-    background-color: #ffda79;
-    position: relative;
-    border-style: groove;
-}
-
-* {
-    background-color: #d1ccc0;
-}
-
- ul {
+#recipe-picture {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-family: 'Roboto', sans-serif;
-    font-size: small;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    vertical-align: middle;
+    justify-self: center;
+    border-radius: 10%;
 }
 
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    margin-left: 10px;
+.recipe{
+    background-color: #ffc048;
+    border-radius: 5%;
+    padding: 1vmax;
+    box-shadow: 1px 1px 3px black;
+    border-bottom-right-radius: 4px;
 }
 
-.recipe * {
-    background-color: #ffda79;
-
-}
-
-a {
-    margin-left: 10px;
-}
-
-input {
-    background-color: white;
-}
-
-button {
-    border-radius: 30%;
-    background-color: lightcyan;
-    color: red;
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }

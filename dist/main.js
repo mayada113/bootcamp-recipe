@@ -1,16 +1,13 @@
-const render = new Renderer()
-
-$("button").on("click", function () {
-    let recipeInput = $("#recipe-input").val()
-    $.get(`/recipes/${recipeInput}`, function (recipesBase) {
-        console.log(recipesBase)        
-        render.render(recipesBase)
+const renderer = new Renderer()
+const searchRecipe = function(){
+    let ingredient = $("#ingredient-input").val().toLowerCase() 
+    $.get(`/recipes/${ingredient}`, function (response) {
+        renderer.render(response)
     })
 
-})
+}
 
-
-$("body").on('click',"img" ,function(){
-    let title=$(this).siblings('#ingredientsList').children()[0].innerHTML ;
-    alert(title)
+$("#recipes").on("click", ".recipe-image", function(){
+    let firstIngredient = $(this).closest(".recipe").find("ul").find("li").first().text()
+    alert(firstIngredient)
 })
